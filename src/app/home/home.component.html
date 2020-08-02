@@ -1,0 +1,50 @@
+<input type="text" placeholder="id del empleado" [(ngModel)]="id">
+<button (click)="getEmpleado(id)">
+    obtener empleados
+</button>
+
+<table *ngIf="mostrar">
+    <thead>
+        <th>Id</th>
+        <th>Empleado</th>
+        <th>TipoContrato</th>
+        <th>DescripcionRole</th>
+        <th>RoleId</th>
+        <th>NombreRole</th>
+        <th>Salario por horas</th>
+        <th>Salario Mensual</th>
+        <th>Salario anual</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let emp of empleados">
+            <td>
+                {{emp.id}}
+            </td>
+            <td>
+                {{emp.name}}
+            </td>
+            <td>
+                {{emp.contractTypeName}}
+            </td>
+            <td>
+                {{emp.roleDescription}}
+            </td>
+            <td>
+                {{emp.roleId}}
+            </td>
+            <td>
+                {{emp.roleName}}
+            </td>
+            <td>
+                {{emp.hourlySalary}}
+            </td>
+            <td>
+                {{emp.monthlySalary}}
+            </td>            
+            <td>
+                {{emp.salrioPorEmpleado}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
